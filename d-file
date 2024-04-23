@@ -1,0 +1,7 @@
+# First we pull the base image from DockerHub
+FROM amazon/aws-lambda-provided:al2
+
+ENV MAX_MSG=10
+# Set the handler
+# by convention <fileName>.<handlerName>
+CMD [ "function.sh.handler" ]
